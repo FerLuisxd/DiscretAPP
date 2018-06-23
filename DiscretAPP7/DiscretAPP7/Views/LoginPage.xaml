@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiscretAPP7.Views.LoginPage"
+             Title="Login"
+             BackgroundImage="login_background">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Padding="10,20,10,5">
+                <Image
+                WidthRequest="200"
+                Source="upc2.png">
+                </Image>
+                <Grid >
+
+                </Grid >
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Font="28"
+                Text="Sección:" FontFamily="{StaticResource BoldFont}"
+                 TextColor="White" 
+                        VerticalOptions="Center"
+                        />
+                    <Picker 
+                    x:Name="picker"
+                Grid.Row="0"
+                Grid.Column="1"                        
+                FontAttributes="Bold,Italic" 
+                FontFamily="{StaticResource BoldFont}"
+                FontSize="Large"                
+                TextColor="White"    
+                >
+                    </Picker>
+                </Grid>
+                <StackLayout 
+                Padding="0,20,0,0"
+                Orientation="Horizontal">
+                 
+                </StackLayout>
+                <Button
+                    Font="20"
+                Margin="40"
+                HeightRequest="46"
+                BackgroundColor="IndianRed"
+                FontFamily="{StaticResource BoldFont}"
+                BorderRadius="23"
+                Text="Siguiente"
+                 Clicked="Dis"
+                TextColor="White">
+
+                </Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

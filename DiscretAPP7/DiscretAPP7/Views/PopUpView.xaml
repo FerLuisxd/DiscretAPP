@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiscretAPP7.Views.PopUpView"
+            xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <StackLayout>
+
+  
+        <Button
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        Text="Salir" 
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="Black"  
+                        TextColor="WhiteSmoke"
+                        FontFamily="{StaticResource BoldFont}"
+                        Clicked="Button_Clicked"
+                > 
+                
+            </Button>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="Black"
+                Text="anterior"
+                 TextColor="WhiteSmoke"
+                        FontFamily="{StaticResource BoldFont}"
+                        Clicked="Button_Clicked_1"
+                >
+
+            </Button>
+            <Button
+                
+                Grid.Row="0"
+               Grid.Column="1"
+                BackgroundColor="Black"
+                Text="siguiente"
+                 TextColor="WhiteSmoke"
+                        FontFamily="{StaticResource BoldFont}"
+                Clicked="Button_Clicked_2"
+                >
+
+            </Button>
+        </Grid>
+        <ScrollView>
+
+            <Image x:Name="tag" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill">
+                <Image.GestureRecognizers>
+                    <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </ScrollView>      
+        
+    </StackLayout>
+</pages:PopupPage>
