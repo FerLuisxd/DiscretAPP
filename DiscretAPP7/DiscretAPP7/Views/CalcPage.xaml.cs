@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,7 +61,9 @@ namespace DiscretAPP7.Views
             if (!string.IsNullOrEmpty(this.FindByName<Entry>("N1").Text) && !string.IsNullOrEmpty(this.FindByName<Entry>("P1").Text))
             {
                 notaF = double.Parse(this.FindByName<Entry>("N1").Text) * (double.Parse(this.FindByName<Entry>("P1").Text) / 100);
+
                 sumaPorc = double.Parse(this.FindByName<Entry>("P1").Text); 
+
             }
             var lb = this.FindByName<Label>("Nota");
             for (int i = 1; i < numeroDeNotas; i++)
@@ -70,7 +73,9 @@ namespace DiscretAPP7.Views
                 if (!string.IsNullOrEmpty((Notas[i]).Text))
                 {
                     numero = double.Parse((Notas[i]).Text);
+
                     if (numero < 0 || numero > 20) {
+
                         Application.Current.MainPage.DisplayAlert("Error", "Las notas deben ser números entre 0 y 20", "Aceptar");
                         return;
                     }
@@ -81,7 +86,9 @@ namespace DiscretAPP7.Views
                     sumaPorc += porcentaje;
                 }
                 notaF += numero * (porcentaje / 100);
+
                 if (sumaPorc>100) {
+
                     Application.Current.MainPage.DisplayAlert("Error", "Porcentaje es mayor a 100%", "Aceptar");
 
 

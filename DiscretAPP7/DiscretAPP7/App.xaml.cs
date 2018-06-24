@@ -20,7 +20,7 @@ namespace DiscretAPP7
             if (a != "") {
                 if (a != string.Empty) {
                     if (!string.IsNullOrWhiteSpace(a))
-                    { nav = new NavigationPage(new DisPage()); } } }
+                    { nav = new NavigationPage(new InicioPage()); } } }
             nav.BarBackgroundColor = Color.Brown;
             MainPage = nav;
         }
