@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiscretAPP7.Views.InicioPage"             
+             Title="Matematica Discreta"
+             BackgroundImage="weeks_background">
+    <ContentPage.Content>
+        <StackLayout Padding="10,20,10,5">
+            <Image
+                WidthRequest="250"
+                Source="logo">
+            </Image>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Image    Grid.Row="0" Grid.Column="1"  Source="calendar"/>
+                <Image    Grid.Row="2" Grid.Column="1" Source="about"/>
+                <Button 
+                Grid.Row="0"
+                Grid.Column="2"
+                Font="28"
+                Text="Calendario" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Brown" 
+                    BackgroundColor="Transparent"
+                        Clicked="DisPage"
+                        VerticalOptions="Center"
+         
+                        />
+                <Label 
+                Grid.Row="1"
+                Grid.Column="2"
+                Font="18"
+                Text="Visualiza las semanas del ciclo" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Brown" 
+                        VerticalOptions="Center"
+                    />
+                
+                <Button 
+                Grid.Row="2"
+                Grid.Column="2"
+                Font="24"
+                Text="Acerca del curso" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Brown" 
+                    Clicked="Acercade"
+                         BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        />
+                <Label 
+                Grid.Row="3"
+                Grid.Column="2"
+                Font="18"
+                Text="Visualiza la informacion del curso" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Brown" 
+                        VerticalOptions="Center"
+                        />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
