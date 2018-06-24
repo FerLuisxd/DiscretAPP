@@ -31,7 +31,7 @@
                 <Label Grid.Row="3" Grid.Column="2" Text="% " VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
                 <Label Grid.Row="4" Grid.Column="2" Text="% " VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
                 <Label Grid.Row="5" Grid.Column="2" Text="% " VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
-                <Entry x:Name="N1"  Keyboard="Numeric " Grid.Row="0" Grid.Column="3"     FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
+                <Entry x:Name="N1"  Keyboard="Numeric" Grid.Row="0" Grid.Column="3"     FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
                 <Entry x:Name="N2"  Keyboard="Numeric"  Grid.Row="1" Grid.Column="3"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"   />
                 <Entry x:Name="N3"  Keyboard="Numeric"  Grid.Row="2" Grid.Column="3"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"     />
                 <Entry x:Name="N4"  Keyboard="Numeric"  Grid.Row="3" Grid.Column="3"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"     />
