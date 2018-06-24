@@ -83,6 +83,9 @@ namespace DiscretAPP7.Views
                 notaF += numero * (porcentaje / 100);
                 if (sumaPorc>100) {
                     Application.Current.MainPage.DisplayAlert("Error", "Porcentaje es mayor a 100%", "Aceptar");
+
+
+
                     return;
                 }
             }
