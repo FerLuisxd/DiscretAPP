@@ -5,28 +5,33 @@
              Title="Calculadora"
              BackgroundImage="weeks_background">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid Padding="15,5,15,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" Text="PC1 10%" VerticalOptions="Center" Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}" />
-                <Label Grid.Row="1" Grid.Column="0" Text="EA 15%" VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
-                <Label Grid.Row="2" Grid.Column="0" Text="PC2 10%" VerticalOptions="Center" Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}" />
-                <Label Grid.Row="3" Grid.Column="0" Text="TA 15%" VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
-                <Label Grid.Row="4" Grid.Column="0" Text="TF 20%" VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
-                <Label Grid.Row="5" Grid.Column="0" Text="EB 30%" VerticalOptions="Center"  Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}"/>
-                <Entry x:Name="N1" Keyboard="Numeric" Grid.Row="0" Grid.Column= "1"          FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
-                <Entry x:Name="N2" Keyboard="Numeric"  Grid.Row="1" Grid.Column="1"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"   />
-                <Entry x:Name="N3" Keyboard="Numeric"  Grid.Row="2" Grid.Column="1"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"     />
-                <Entry x:Name="N4" Keyboard="Numeric"  Grid.Row="3" Grid.Column="1"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"     />
-                <Entry x:Name="N5" Keyboard="Numeric"  Grid.Row="4" Grid.Column="1"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"      />
-                <Entry x:Name="N6" Keyboard="Numeric"  Grid.Row="5" Grid.Column="1"         FontSize="18"  FontFamily="{StaticResource BoldFont}" TextColor="Black"         />
-            </Grid>
+        <ScrollView>
+            <StackLayout>
+                <Grid Padding="15,5,15,0" x:Name="Contend" MinimumHeightRequest="500" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Nota 1" VerticalOptions="Center" Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}" />
+                    <Entry x:Name="N1" Keyboard="Numeric" Grid.Row="0" Grid.Column= "1"          FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
+                    <Entry x:Name="P1" Keyboard="Numeric" Grid.Row="0" Grid.Column= "2"          FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
 
-            <Button Font="20" Text="Calcular" x:Name="Calc" BorderRadius="27" BackgroundColor="DarkRed" Margin="30" TextColor="White" FontAttributes="Bold" FontFamily="{StaticResource BoldFont}"/>
-            <Label
+                </Grid>
+                <Button 
+                Clicked="AgregarNuevo"
+                Font="20" Text="Agregar Nueva nota"  BorderRadius="27" BackgroundColor="DarkRed"  TextColor="White" FontAttributes="Bold" FontFamily="{StaticResource BoldFont}"/>
+                <Button 
+                Clicked="EliminarUltimo"
+                Font="20" Text="Eliminar Ultima nota"  BorderRadius="27" BackgroundColor="DarkRed" TextColor="White" FontAttributes="Bold" FontFamily="{StaticResource BoldFont}"/>
+
+                <Button
+                Clicked="Calculadora"
+                Font="20" Text="Calcular" 
+                x:Name="Calc" BorderRadius="27" 
+                BackgroundColor="DarkRed" 
+                TextColor="White" FontAttributes="Bold" FontFamily="{StaticResource BoldFont}"/>
+                <Label
                 Font="25"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
@@ -35,6 +40,7 @@
                 VerticalOptions="CenterAndExpand" 
                 x:Name="Nota"
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
