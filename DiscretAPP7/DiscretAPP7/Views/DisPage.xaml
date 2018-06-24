@@ -8,34 +8,6 @@
         <ScrollView>
             <StackLayout            
              Orientation="Vertical" >
-
-                <StackLayout
-                    Orientation="Horizontal"
-                    BackgroundColor="DarkRed"
-                    Spacing="20">
-                    <Button
-                   
-                        FontSize="18"
-                        FontAttributes="Bold"
-                        Text="Plan Calendario" 
-                        HorizontalOptions="CenterAndExpand"
-                        BackgroundColor="Transparent"  
-                        TextColor="WhiteSmoke"
-                       FontFamily="{StaticResource BoldFont}"
-                        Clicked="ShowPopupPC"
-                    ></Button>
-                    <Button
-                       
-                        FontSize="18"
-                        FontAttributes="Bold"
-                        Text="Silabo" 
-                        HorizontalOptions="CenterAndExpand"
-                        BackgroundColor="Transparent"  
-                        TextColor="WhiteSmoke"
-                       FontFamily="{StaticResource BoldFont}"
-                         Clicked="ShowPopupSilab"
-                    ></Button>
-                </StackLayout>
                 <StackLayout
                 Orientation="Horizontal"
                 BackgroundColor="DarkRed">
@@ -265,7 +237,20 @@
                     </StackLayout>
                     <Button
                         
-                        Margin="15,15,20,20"
+                        Margin="15,15,15,5"
+                        Text="Plan Calendario" 
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       Font="20"
+                       BackgroundColor="DarkRed" 
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        FontFamily="{StaticResource BoldFont}"
+                         Clicked="ShowPopupPC" />
+
+                    <Button
+                        
+                        Margin="15,5,15,5"
                         Text="Calcular Notas" 
                        TextColor="White"
                        FontAttributes="Bold"
@@ -275,6 +260,20 @@
                         HeightRequest="46"
                         FontFamily="{StaticResource BoldFont}"
                         Clicked="Next">
+
+                    </Button>
+                    <Button
+                        
+                        Margin="15,5,15,5"
+                        Text="LogOut" 
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       Font="20"
+                       BackgroundColor="DarkRed" 
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        FontFamily="{StaticResource BoldFont}"
+                        Clicked="LogOut">
 
                     </Button>
                 </StackLayout>

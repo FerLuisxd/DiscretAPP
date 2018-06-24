@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,9 +20,9 @@ namespace DiscretAPP7.Views
         {
             Application.Current.MainPage.Navigation.PushAsync(new DisPage());
         }
-        protected void Acercade(object sender, EventArgs e)
+        private void Acercade(object o, EventArgs e)
         {
-            //Application.Current.MainPage.Navigation.PushAsync(new DisPage());
+            PopupNavigation.Instance.PushAsync(new PopUpView(2));
         }
 
     }

@@ -295,10 +295,6 @@ namespace DiscretAPP7.Views
             PopupNavigation.Instance.PushAsync(new PopUpView(1));
         }
 
-        private void ShowPopupSilab(object o, EventArgs e)
-        {
-            PopupNavigation.Instance.PushAsync(new PopUpView(2));
-        }
 
         protected void SemA(object sender, EventArgs e)
         {
@@ -550,7 +546,7 @@ namespace DiscretAPP7.Views
             if (sem == 12){ Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130025_1")); }
             if (sem == 13){ Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130057_1"));      }
             if (sem == 14) { Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130036_1m")); }
-            if (sem == 15)
+            if (sem == 15) { }
             if(sem == 16) { }
            
         }
@@ -570,7 +566,7 @@ namespace DiscretAPP7.Views
             if (sem == 12){ Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130026_1"));}
             if (sem == 13){ Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130058_1"));}
             if (sem == 14) { Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130037_1")); }
-            if (sem == 15)
+            if (sem == 15) { }
             if(sem == 16) { }
           
         }
@@ -590,13 +586,17 @@ namespace DiscretAPP7.Views
             if (sem == 12) {Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130027_1"));   }
             if (sem == 13) {Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130059_1"));   }
             if (sem == 14) { Device.OpenUri(new Uri("https://aulavirtual.upc.edu.pe/webapps/blackboard/content/listContent.jsp?course_id=_148821_1&content_id=_11130038_1")); }
-            if(sem == 15)
+            if (sem == 15) { }
             if(sem == 16) { }
            
         }
         protected void Next(object sender, EventArgs e)
         {
             Application.Current.MainPage.Navigation.PushAsync(new CalcPage());
+        }
+        protected void LogOut(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
         }
     }
 }
