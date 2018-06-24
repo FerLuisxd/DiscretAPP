@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiscretAPP7.Views.BuscarView">
+    <ContentPage.Content>
+        <StackLayout
+            x:Name="micont">
+            <Label Text="Ingrese el tema que deseas buscar!"
+                FontSize="18"
+                FontAttributes="Bold"
+                BackgroundColor="DarkRed"  
+                TextColor="WhiteSmoke"
+               FontFamily="{StaticResource BoldFont}"
+                HorizontalOptions="CenterAndExpand" />
+            <Entry
+                x:Name="Bs"
+                TextChanged="Entry_TextChanged"
+                 FontSize="18"
+                FontAttributes="Bold"
+                BackgroundColor="White"  
+                TextColor="Black"
+                FontFamily="{StaticResource BoldFont}"
+                ></Entry>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -15,6 +15,7 @@ namespace DiscretAPP7.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+       
         Picker p;
         Switch s;
         public LoginPage()

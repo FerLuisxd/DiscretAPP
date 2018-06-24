@@ -8,6 +8,18 @@
         <ScrollView>
             <StackLayout            
              Orientation="Vertical" >
+                <Button
+                    FontSize="18"
+                FontAttributes="Bold"
+                Text="Buscar Tema por semana" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"  
+                TextColor="WhiteSmoke"
+               FontFamily="{StaticResource BoldFont}"
+                    Clicked="Button_Clicked"
+                    >
+                    
+                </Button>
                 <StackLayout
                 Orientation="Horizontal"
                 BackgroundColor="DarkRed">

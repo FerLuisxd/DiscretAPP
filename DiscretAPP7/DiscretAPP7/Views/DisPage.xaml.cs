@@ -14,6 +14,7 @@ namespace DiscretAPP7.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DisPage : ContentPage
     {
+        
         Label semaa;
         Label pippo;
         Button VSemA;
@@ -25,8 +26,14 @@ namespace DiscretAPP7.Views
         {
             InitializeComponent();
             asd();
+           
         }
-
+        public DisPage(int semana)
+        {
+            InitializeComponent();
+            asd();
+            sem = semana;
+        }
         private void asd()
         {
             VSemA = this.FindByName<Button>("BSemA");
@@ -597,6 +604,11 @@ namespace DiscretAPP7.Views
         protected void LogOut(object sender, EventArgs e)
         {
             Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new BuscarView());
         }
     }
 }
