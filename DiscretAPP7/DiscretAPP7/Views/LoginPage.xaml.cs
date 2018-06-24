@@ -57,7 +57,7 @@ namespace DiscretAPP7.Views
             CustomProperties properties = new CustomProperties();
             properties.Set("Seccion", option);
             AppCenter.SetCustomProperties(properties);
-            Application.Current.MainPage.Navigation.PushAsync(new DisPage());
+            Application.Current.MainPage.Navigation.PushAsync(new InicioPage());
         }
         // void DoStuff()
         // {
