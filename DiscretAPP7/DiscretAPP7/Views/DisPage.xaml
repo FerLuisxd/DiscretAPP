@@ -14,7 +14,7 @@
                 Text="Buscar Tema por semana" 
                 HorizontalOptions="CenterAndExpand"
                 BackgroundColor="Transparent"  
-                TextColor="WhiteSmoke"
+                TextColor="Black"
                FontFamily="{StaticResource BoldFont}"
                     Clicked="Button_Clicked"
                     >
