@@ -84,17 +84,18 @@ namespace DiscretAPP7.Views
             {
                 if (Temas[i].StartsWith(temBuscar))
                 {
-
-                    Button nuevo = new Button
+                    if (Temas[i] != "")
                     {
-                        Text = Temas[i],
-                        TextColor = Color.Black,
-                        BackgroundColor = Color.Red
-                    };
-                    nuevo.Clicked += Button_Clicked;
-                    Encontrados.Add(nuevo);
-                    micont.Children.Add(nuevo);
-
+                        Button nuevo = new Button
+                        {
+                            Text = Temas[i],
+                            TextColor = Color.Black,
+                            BackgroundColor = Color.Transparent
+                        };
+                        nuevo.Clicked += Button_Clicked;
+                        Encontrados.Add(nuevo);
+                        micont.Children.Add(nuevo);
+                    }
                 }
 
             }

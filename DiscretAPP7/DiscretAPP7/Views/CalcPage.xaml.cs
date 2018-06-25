@@ -18,6 +18,7 @@ namespace DiscretAPP7.Views
         Entry[] Notas = new Entry[100];
         Label[] Textos = new Label[100];
         Entry[] Porcentajes = new Entry[100];
+        Label[] TextosP = new Label[100];
         public CalcPage()
         {
 
@@ -29,16 +30,25 @@ namespace DiscretAPP7.Views
         {
             var grid = this.FindByName<Grid>("Contend");
 
+            
             Keyboard o = Keyboard.Numeric;
-            Label tx = new Label { FontSize = 18, FontFamily = "{StaticResource BoldFont}", Text = "Nota " + (numeroDeNotas + 1) };
+           
+            Label tx = new Label { TextColor= Color.Black, FontSize = 18, Text = "Nota " + (numeroDeNotas + 1) };
+            tx.FontFamily = "{StaticResource BoldFont}";
             grid.Children.Add(tx, 0, numeroDeNotas);
             Textos[numeroDeNotas] = tx;
-            Entry x = new Entry { Keyboard = o, FontSize = 18, FontFamily = "{StaticResource BoldFont}" };
+            Entry x = new Entry { TextColor = Color.Black,  Keyboard = o, FontSize = 18};
+            x.FontFamily = "StaticResource BoldFont";
             grid.Children.Add(x, 1, numeroDeNotas);
             Notas[numeroDeNotas] = x;
-            Entry y = new Entry { Keyboard = o, FontFamily = "{StaticResource BoldFont}" };
+            Entry y = new Entry { TextColor = Color.Black, Keyboard = o};
+            y.FontFamily = "StaticResource BoldFont";
             grid.Children.Add(y, 2, numeroDeNotas);
             Porcentajes[numeroDeNotas] = y;
+            Label tx2 = new Label { TextColor = Color.Black, FontSize = 18, Text = "%" };
+            tx2.FontFamily = "StaticResource BoldFont";
+            grid.Children.Add(tx2, 3, numeroDeNotas);
+            TextosP[numeroDeNotas] = tx2;
 
             numeroDeNotas++;
         }
@@ -51,6 +61,7 @@ namespace DiscretAPP7.Views
                 grid.Children.Remove(Notas[numeroDeNotas - 1]);
                 grid.Children.Remove(Porcentajes[numeroDeNotas - 1]);
                 grid.Children.Remove(Textos[numeroDeNotas - 1]);
+                grid.Children.Remove(TextosP[numeroDeNotas - 1]);
                 numeroDeNotas--;
             }
         }

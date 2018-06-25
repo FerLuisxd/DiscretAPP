@@ -12,11 +12,12 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Nota 1" VerticalOptions="Center" Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}" />
                     <Entry x:Name="N1" Keyboard="Numeric" Grid.Row="0" Grid.Column= "1"          FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
                     <Entry x:Name="P1" Keyboard="Numeric" Grid.Row="0" Grid.Column= "2"          FontSize="18" FontFamily="{StaticResource BoldFont}"  TextColor="Black" />
-
+                    <Label Grid.Row="0" Grid.Column="3" Text="%" VerticalOptions="Center" Font="18" TextColor="Black" FontFamily="{StaticResource BoldFont}" />
                 </Grid>
                 <Button 
                 Clicked="AgregarNuevo"
