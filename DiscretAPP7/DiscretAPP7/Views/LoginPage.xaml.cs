@@ -27,6 +27,7 @@ namespace DiscretAPP7.Views
             listData.Add("SW55");
             listData.Add("SI32");
             listData.Add("CC21");
+            listData.Add("XXXX");
             p = this.FindByName<Picker>("picker");
             p.ItemsSource = listData;
             p.SelectedItem = Infrastructure.Settings.LastUsedSec;

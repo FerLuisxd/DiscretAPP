@@ -59,6 +59,7 @@ namespace DiscretAPP7.Views
             semaa = this.FindByName<Label>("Semana");
             semaa.Text = "Semana : " + sem.ToString();
             if (sem == 8) semaa.Text = "Semana : " + sem.ToString() + " Parcial";
+            CalcSem();
         }
         protected void SemS(object sender, EventArgs e)
         {
@@ -66,235 +67,239 @@ namespace DiscretAPP7.Views
             {
                 sem++;
                 semaa.Text = "Semana : " + sem.ToString();
-                if (sem == 1)
-                {
-                    S1C1.Text = "Indicaciones generales";
-                    S1C2.Text = "Conjuntos";
-                    S1C3.Text = "";
-                    S2C1.Text = "División en los enteros";
-                    S2C2.Text = "Actividad Colaborativa 1";
-                    S2C3.Text = "";
-                    SVC1.Text = "Matrices Booleanas";
-                    SVC2.Text = "Tarea 1";
-                    SVC3.Text = "Evaluación Virtual 1";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 2)
-                {
-                    S1C1.Text = "Matrices Booleanas";
-                    S1C2.Text = "Lógica proposicional";
-                    S1C3.Text = "";
-                    S2C1.Text = "Cuantificadores";
-                    S2C2.Text = "Actividad Colaborativa 2";
-                    S2C3.Text = "";
-                    SVC1.Text = "Inducción Matemática";
-                    SVC2.Text = "Tarea 2";
-                    SVC3.Text = "Evaluación Virtual 2";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 3)
-                {
-                    S1C1.Text = "Inducción Matemática";
-                    S1C2.Text = "Algoritmos";
-                    S1C3.Text = "";
-                    S2C1.Text = "Sucesiones";
-                    S2C2.Text = "Sucesiones recurrentes";
-                    S2C3.Text = "Actividad Colaborativa 3";
-                    SVC1.Text = "Relaciones: Definición, representación";
-                    SVC2.Text = "Videoconferencia PC1";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 4)
-                {
-                    S1C1.Text = "Práctica Calificada 1";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Relaciones: Definición, representación";
-                    S2C2.Text = "Relaciones: Propiedades";
-                    S2C3.Text = "Actividad Colaborativa 4";
-                    SVC1.Text = "Relaciones: Manipulación";
-                    SVC2.Text = "Tarea 3";
-                    SVC3.Text = "Evaluación Virtual 3";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 5)
-                {
-                    S1C2.Text = "Relaciones: Manipulación";
-                    S1C3.Text = "Funciones: Definición, tipos";
-                    S2C1.Text = "";
-                    S2C2.Text = "Funciones de permutación";
-                    S2C3.Text = "Actividad Colaborativa 5";
-                    SVC1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
-                    SVC2.Text = "Tarea 4";
-                    SVC3.Text = "Evaluación Virtual 4";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 6)
-                {
-                    S1C1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
-                    S1C2.Text = "Estructuras de orden: Elementos extremos, cotas";
-                    S1C3.Text = "";
-                    S2C1.Text = "Retículas: Definición, tipos";
-                    S2C2.Text = "Actividad colaborativa 6";
-                    S2C3.Text = "";
-                    SVC1.Text = "Álgebra de Boole: Definición, propiedades";
-                    SVC2.Text = "Tarea 5";
-                    SVC3.Text = "Evaluación Virtual 5";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 7)
-                {
-                    S1C1.Text = "Álgebra de Boole: Definición, propiedades";
-                    S1C2.Text = "Clase integral";
-                    S1C3.Text = "";
-                    S2C1.Text = "Clase integral";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 8)
-                {
-                    S1C1.Text = "Matriz de habilidades";
-                    S1C2.Text = "Exámenes Parciales pasados";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    semaa.Text = "Semana : " + sem.ToString() + " Parcial";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 9)
-                {
-                    S1C1.Text = "Funciones booleanas";
-                    S1C2.Text = "Mapas de Karnaugh";
-                    S1C3.Text = "";
-                    S2C1.Text = "Funciones booleanas en contextos reales";
-                    S2C2.Text = "Revisión del avance del Trabajo Final";
-                    S2C3.Text = "Actividad colaborativa 7";
-                    SVC1.Text = "Árboles dirigidos";
-                    SVC2.Text = "Tarea 6";
-                    SVC3.Text = "Evaluación Virtual 6";
-                    a.Text = "";
-                    b.Text = "";
-                }
-
-                if (sem == 10)
-                {
-                    S1C1.Text = "Árboles dirigidos";
-                    S1C2.Text = "Búsqueda en árboles";
-                    S1C3.Text = "";
-                    S2C1.Text = "Árboles no dirigidos";
-                    S2C2.Text = "Actividad colaborativa 8";
-                    S2C3.Text = "";
-                    SVC1.Text = "Espacio Euclidiano";
-                    SVC2.Text = "Tarea 7";
-                    SVC3.Text = "Evaluación Virtual 7";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 11)
-                {
-                    S1C1.Text = "Espacio Euclidiano";
-                    S1C2.Text = "Combinación lineal";
-                    S1C3.Text = "Independencia lineal";
-                    S2C1.Text = "Base de un espacio vectorial";
-                    S2C2.Text = "Coordenadas de un vector";
-                    S2C3.Text = "Actividad colaborativa 9";
-                    SVC1.Text = "Guía del alumno";
-                    SVC2.Text = "Cambio de base";
-                    SVC3.Text = "Videoconferencia PC2";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 12)
-                {
-                    S1C1.Text = "Práctica Calificada 2";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Cambio de base";
-                    S2C2.Text = "Revisión del avance del trabajo final";
-                    S2C3.Text = "";
-                    SVC1.Text = "Guía del alumno";
-                    SVC2.Text = "Transformaciones Lineales";
-                    SVC3.Text = "Evaluación Virtual 8";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 13)
-                {
-                    S1C1.Text = "Transformaciones lineales";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Núcleo e imagen de una transformación lineal";
-                    S2C2.Text = "Actividad colaborativa 9";
-                    S2C3.Text = "";
-                    SVC1.Text = "Autovalores. Autovectores";
-                    SVC2.Text = "Tarea 9";
-                    SVC3.Text = "Evaluación Virtual 9";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 14)
-                {
-                    S1C1.Text = "Retroalimentación: Autovectores y Autovalores";
-                    S1C2.Text = "Tema: Cadena de Markov";
-                    S1C3.Text = "Ejercicios en Clase: Cadena de Markov";
-                    S2C1.Text = "Tema: Cadena de Markov";
-                    S2C2.Text = "Ejercicios en Clase: Cadena de Markov";
-                    S2C3.Text = "Problemas Resueltos: Cadena de Markov 1 y 2";
-                    SVC1.Text = "Clase Integral - EB";
-                    SVC2.Text = "Enlace para subir la Tarea 10";
-                    SVC3.Text = "Evaluacion Virtual 10";
-                    a.Text = "* Inicio: miércoles 20 de junio a las 0 h";
-                    b.Text = " * Fin: domingo 24 de junio a las 24 h";
-                }
-                if (sem == 15)
-                {
-                    S1C1.Text = "";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 16)
-                {
-                    S1C1.Text = "";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
+                CalcSem();
             }
 
 
            
+        }
+        protected void CalcSem()
+        {
+            if (sem == 1)
+            {
+                S1C1.Text = "Indicaciones generales";
+                S1C2.Text = "Conjuntos";
+                S1C3.Text = "";
+                S2C1.Text = "División en los enteros";
+                S2C2.Text = "Actividad Colaborativa 1";
+                S2C3.Text = "";
+                SVC1.Text = "Matrices Booleanas";
+                SVC2.Text = "Tarea 1";
+                SVC3.Text = "Evaluación Virtual 1";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 2)
+            {
+                S1C1.Text = "Matrices Booleanas";
+                S1C2.Text = "Lógica proposicional";
+                S1C3.Text = "";
+                S2C1.Text = "Cuantificadores";
+                S2C2.Text = "Actividad Colaborativa 2";
+                S2C3.Text = "";
+                SVC1.Text = "Inducción Matemática";
+                SVC2.Text = "Tarea 2";
+                SVC3.Text = "Evaluación Virtual 2";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 3)
+            {
+                S1C1.Text = "Inducción Matemática";
+                S1C2.Text = "Algoritmos";
+                S1C3.Text = "";
+                S2C1.Text = "Sucesiones";
+                S2C2.Text = "Sucesiones recurrentes";
+                S2C3.Text = "Actividad Colaborativa 3";
+                SVC1.Text = "Relaciones: Definición, representación";
+                SVC2.Text = "Videoconferencia PC1";
+                SVC3.Text = "";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 4)
+            {
+                S1C1.Text = "Práctica Calificada 1";
+                S1C2.Text = "";
+                S1C3.Text = "";
+                S2C1.Text = "Relaciones: Definición, representación";
+                S2C2.Text = "Relaciones: Propiedades";
+                S2C3.Text = "Actividad Colaborativa 4";
+                SVC1.Text = "Relaciones: Manipulación";
+                SVC2.Text = "Tarea 3";
+                SVC3.Text = "Evaluación Virtual 3";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 5)
+            {
+                S1C2.Text = "Relaciones: Manipulación";
+                S1C3.Text = "Funciones: Definición, tipos";
+                S2C1.Text = "";
+                S2C2.Text = "Funciones de permutación";
+                S2C3.Text = "Actividad Colaborativa 5";
+                SVC1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
+                SVC2.Text = "Tarea 4";
+                SVC3.Text = "Evaluación Virtual 4";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 6)
+            {
+                S1C1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
+                S1C2.Text = "Estructuras de orden: Elementos extremos, cotas";
+                S1C3.Text = "";
+                S2C1.Text = "Retículas: Definición, tipos";
+                S2C2.Text = "Actividad colaborativa 6";
+                S2C3.Text = "";
+                SVC1.Text = "Álgebra de Boole: Definición, propiedades";
+                SVC2.Text = "Tarea 5";
+                SVC3.Text = "Evaluación Virtual 5";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 7)
+            {
+                S1C1.Text = "Álgebra de Boole: Definición, propiedades";
+                S1C2.Text = "Clase integral";
+                S1C3.Text = "";
+                S2C1.Text = "Clase integral";
+                S2C2.Text = "";
+                S2C3.Text = "";
+                SVC1.Text = "";
+                SVC2.Text = "";
+                SVC3.Text = "";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 8)
+            {
+                S1C1.Text = "Matriz de habilidades";
+                S1C2.Text = "Exámenes Parciales pasados";
+                S1C3.Text = "";
+                S2C1.Text = "";
+                S2C2.Text = "";
+                S2C3.Text = "";
+                SVC1.Text = "";
+                SVC2.Text = "";
+                SVC3.Text = "";
+                semaa.Text = "Semana : " + sem.ToString() + " Parcial";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 9)
+            {
+                S1C1.Text = "Funciones booleanas";
+                S1C2.Text = "Mapas de Karnaugh";
+                S1C3.Text = "";
+                S2C1.Text = "Funciones booleanas en contextos reales";
+                S2C2.Text = "Revisión del avance del Trabajo Final";
+                S2C3.Text = "Actividad colaborativa 7";
+                SVC1.Text = "Árboles dirigidos";
+                SVC2.Text = "Tarea 6";
+                SVC3.Text = "Evaluación Virtual 6";
+                a.Text = "";
+                b.Text = "";
+            }
+
+            if (sem == 10)
+            {
+                S1C1.Text = "Árboles dirigidos";
+                S1C2.Text = "Búsqueda en árboles";
+                S1C3.Text = "";
+                S2C1.Text = "Árboles no dirigidos";
+                S2C2.Text = "Actividad colaborativa 8";
+                S2C3.Text = "";
+                SVC1.Text = "Espacio Euclidiano";
+                SVC2.Text = "Tarea 7";
+                SVC3.Text = "Evaluación Virtual 7";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 11)
+            {
+                S1C1.Text = "Espacio Euclidiano";
+                S1C2.Text = "Combinación lineal";
+                S1C3.Text = "Independencia lineal";
+                S2C1.Text = "Base de un espacio vectorial";
+                S2C2.Text = "Coordenadas de un vector";
+                S2C3.Text = "Actividad colaborativa 9";
+                SVC1.Text = "Guía del alumno";
+                SVC2.Text = "Cambio de base";
+                SVC3.Text = "Videoconferencia PC2";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 12)
+            {
+                S1C1.Text = "Práctica Calificada 2";
+                S1C2.Text = "";
+                S1C3.Text = "";
+                S2C1.Text = "Cambio de base";
+                S2C2.Text = "Revisión del avance del trabajo final";
+                S2C3.Text = "";
+                SVC1.Text = "Guía del alumno";
+                SVC2.Text = "Transformaciones Lineales";
+                SVC3.Text = "Evaluación Virtual 8";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 13)
+            {
+                S1C1.Text = "Transformaciones lineales";
+                S1C2.Text = "";
+                S1C3.Text = "";
+                S2C1.Text = "Núcleo e imagen de una transformación lineal";
+                S2C2.Text = "Actividad colaborativa 9";
+                S2C3.Text = "";
+                SVC1.Text = "Autovalores. Autovectores";
+                SVC2.Text = "Tarea 9";
+                SVC3.Text = "Evaluación Virtual 9";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 14)
+            {
+                S1C1.Text = "Retroalimentación: Autovectores y Autovalores";
+                S1C2.Text = "Tema: Cadena de Markov";
+                S1C3.Text = "Ejercicios en Clase: Cadena de Markov";
+                S2C1.Text = "Tema: Cadena de Markov";
+                S2C2.Text = "Ejercicios en Clase: Cadena de Markov";
+                S2C3.Text = "Problemas Resueltos: Cadena de Markov 1 y 2";
+                SVC1.Text = "Clase Integral - EB";
+                SVC2.Text = "Enlace para subir la Tarea 10";
+                SVC3.Text = "Evaluacion Virtual 10";
+                a.Text = "* Inicio: miércoles 20 de junio a las 0 h";
+                b.Text = " * Fin: domingo 24 de junio a las 24 h";
+            }
+            if (sem == 15)
+            {
+                S1C1.Text = "";
+                S1C2.Text = "";
+                S1C3.Text = "";
+                S2C1.Text = "";
+                S2C2.Text = "";
+                S2C3.Text = "";
+                SVC1.Text = "";
+                SVC2.Text = "";
+                SVC3.Text = "";
+                a.Text = "";
+                b.Text = "";
+            }
+            if (sem == 16)
+            {
+                S1C1.Text = "";
+                S1C2.Text = "";
+                S1C3.Text = "";
+                S2C1.Text = "";
+                S2C2.Text = "";
+                S2C3.Text = "";
+                SVC1.Text = "";
+                SVC2.Text = "";
+                SVC3.Text = "";
+                a.Text = "";
+                b.Text = "";
+            }
         }
        
         private void ShowPopupPC(object o, EventArgs e)
@@ -309,231 +314,7 @@ namespace DiscretAPP7.Views
             {
                 sem--;
                 semaa.Text = "Semana : " + sem.ToString();
-                if (sem == 1)
-                {
-                    S1C1.Text = "Indicaciones generales";
-                    S1C2.Text = "Conjuntos";
-                    S1C3.Text = "";
-                    S2C1.Text = "División en los enteros";
-                    S2C2.Text = "Actividad Colaborativa 1";
-                    S2C3.Text = "";
-                    SVC1.Text = "Matrices Booleanas";
-                    SVC2.Text = "Tarea 1";
-                    SVC3.Text = "Evaluación Virtual 1";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 2)
-                {
-                    S1C1.Text = "Matrices Booleanas";
-                    S1C2.Text = "Lógica proposicional";
-                    S1C3.Text = "";
-                    S2C1.Text = "Cuantificadores";
-                    S2C2.Text = "Actividad Colaborativa 2";
-                    S2C3.Text = "";
-                    SVC1.Text = "Inducción Matemática";
-                    SVC2.Text = "Tarea 2";
-                    SVC3.Text = "Evaluación Virtual 2";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 3)
-                {
-                    S1C1.Text = "Inducción Matemática";
-                    S1C2.Text = "Algoritmos";
-                    S1C3.Text = "";
-                    S2C1.Text = "Sucesiones";
-                    S2C2.Text = "Sucesiones recurrentes";
-                    S2C3.Text = "Actividad Colaborativa 3";
-                    SVC1.Text = "Relaciones: Definición, representación";
-                    SVC2.Text = "Videoconferencia PC1";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 4)
-                {
-                    S1C1.Text = "Práctica Calificada 1";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Relaciones: Definición, representación";
-                    S2C2.Text = "Relaciones: Propiedades";
-                    S2C3.Text = "Actividad Colaborativa 4";
-                    SVC1.Text = "Relaciones: Manipulación";
-                    SVC2.Text = "Tarea 3";
-                    SVC3.Text = "Evaluación Virtual 3";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 5)
-                {
-                    S1C2.Text = "Relaciones: Manipulación";
-                    S1C3.Text = "Funciones: Definición, tipos";
-                    S2C1.Text = "";
-                    S2C2.Text = "Funciones de permutación";
-                    S2C3.Text = "Actividad Colaborativa 5";
-                    SVC1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
-                    SVC2.Text = "Tarea 4";
-                    SVC3.Text = "Evaluación Virtual 4";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 6)
-                {
-                    S1C1.Text = "Estructuras de orden: Definición, diagrama de Hasse";
-                    S1C2.Text = "Estructuras de orden: Elementos extremos, cotas";
-                    S1C3.Text = "";
-                    S2C1.Text = "Retículas: Definición, tipos";
-                    S2C2.Text = "Actividad colaborativa 6";
-                    S2C3.Text = "";
-                    SVC1.Text = "Álgebra de Boole: Definición, propiedades";
-                    SVC2.Text = "Tarea 5";
-                    SVC3.Text = "Evaluación Virtual 5";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 7)
-                {
-                    S1C1.Text = "Álgebra de Boole: Definición, propiedades";
-                    S1C2.Text = "Clase integral";
-                    S1C3.Text = "";
-                    S2C1.Text = "Clase integral";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 8)
-                {
-                    S1C1.Text = "Matriz de habilidades";
-                    S1C2.Text = "Exámenes Parciales pasados";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    semaa.Text = "Semana : " + sem.ToString() + " Parcial";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 9)
-                {
-                    S1C1.Text = "Funciones booleanas";
-                    S1C2.Text = "Mapas de Karnaugh";
-                    S1C3.Text = "";
-                    S2C1.Text = "Funciones booleanas en contextos reales";
-                    S2C2.Text = "Revisión del avance del Trabajo Final";
-                    S2C3.Text = "Actividad colaborativa 7";
-                    SVC1.Text = "Árboles dirigidos";
-                    SVC2.Text = "Tarea 6";
-                    SVC3.Text = "Evaluación Virtual 6";
-                    a.Text = "";
-                    b.Text = "";
-                }
-
-                if (sem == 10)
-                {
-                    S1C1.Text = "Árboles dirigidos";
-                    S1C2.Text = "Búsqueda en árboles";
-                    S1C3.Text = "";
-                    S2C1.Text = "Árboles no dirigidos";
-                    S2C2.Text = "Actividad colaborativa 8";
-                    S2C3.Text = "";
-                    SVC1.Text = "Espacio Euclidiano";
-                    SVC2.Text = "Tarea 7";
-                    SVC3.Text = "Evaluación Virtual 7";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 11)
-                {
-                    S1C1.Text = "Espacio Euclidiano";
-                    S1C2.Text = "Combinación lineal";
-                    S1C3.Text = "Independencia lineal";
-                    S2C1.Text = "Base de un espacio vectorial";
-                    S2C2.Text = "Coordenadas de un vector";
-                    S2C3.Text = "Actividad colaborativa 9";
-                    SVC1.Text = "Guía del alumno";
-                    SVC2.Text = "Cambio de base";
-                    SVC3.Text = "Videoconferencia PC2";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 12)
-                {
-                    S1C1.Text = "Práctica Calificada 2";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Cambio de base";
-                    S2C2.Text = "Revisión del avance del trabajo final";
-                    S2C3.Text = "";
-                    SVC1.Text = "Guía del alumno";
-                    SVC2.Text = "Transformaciones Lineales";
-                    SVC3.Text = "Evaluación Virtual 8";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 13)
-                {
-                    S1C1.Text = "Transformaciones lineales";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "Núcleo e imagen de una transformación lineal";
-                    S2C2.Text = "Actividad colaborativa 9";
-                    S2C3.Text = "";
-                    SVC1.Text = "Autovalores. Autovectores";
-                    SVC2.Text = "Tarea 9";
-                    SVC3.Text = "Evaluación Virtual 9";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 14)
-                {
-                    S1C1.Text = "Autovalores. Autovectores";
-                    S1C2.Text = "Cadena de Markov";
-                    S1C3.Text = "";
-                    S2C1.Text = "Cadena de Markov.";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "Clase Integradora";
-                    SVC2.Text = "Tarea 10";
-                    SVC3.Text = "Evaluación Virtual 10";
-                    a.Text = "* Inicio: miércoles 20 de junio a las 0 h";
-                    b.Text = " * Fin: domingo 24 de junio a las 24 h";
-                }
-                if (sem == 15)
-                {
-                    S1C1.Text = "";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
-                if (sem == 16)
-                {
-                    S1C1.Text = "";
-                    S1C2.Text = "";
-                    S1C3.Text = "";
-                    S2C1.Text = "";
-                    S2C2.Text = "";
-                    S2C3.Text = "";
-                    SVC1.Text = "";
-                    SVC2.Text = "";
-                    SVC3.Text = "";
-                    a.Text = "";
-                    b.Text = "";
-                }
+                CalcSem();
             }
         
         }

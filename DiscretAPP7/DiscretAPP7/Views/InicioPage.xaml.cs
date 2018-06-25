@@ -24,6 +24,10 @@ namespace DiscretAPP7.Views
         {
             PopupNavigation.Instance.PushAsync(new PopUpView(2));
         }
+        private void ShowPopupPC(object o, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new PopUpView(1));
+        }
 
     }
 }
