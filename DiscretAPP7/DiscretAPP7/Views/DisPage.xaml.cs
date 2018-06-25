@@ -14,7 +14,7 @@ namespace DiscretAPP7.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DisPage : ContentPage
     {
-        
+        String seccion;
         Label semaa;
         Label pippo;
         Button VSemA;
@@ -25,12 +25,14 @@ namespace DiscretAPP7.Views
         public DisPage()
         {
             InitializeComponent();
+
+            notLabel.Text = Infrastructure.Settings.LastUsedSec; 
             asd(0);
-           
         }
         public DisPage(int semana)
         {
             InitializeComponent();
+            notLabel.Text = Infrastructure.Settings.LastUsedSec;
             for (int i = 1; i <= 3; i++)
             {
                 if (semana % 3 == 0)
@@ -48,7 +50,6 @@ namespace DiscretAPP7.Views
         {
             VSemA = this.FindByName<Button>("BSemA");
             VSemS = this.FindByName<Button>("BSemS");
-            pippo = this.FindByName<Label>("notLabel");
             S1C1 = this.FindByName<Label>("S1C1");
             S1C2 = this.FindByName<Label>("S1C2");
             S1C3 = this.FindByName<Label>("S1C3");
@@ -60,8 +61,7 @@ namespace DiscretAPP7.Views
             SVC3 = this.FindByName<Label>("SVC3");
             a = this.FindByName<Label>("no1");
             b = this.FindByName<Label>("no2");
-            //pippo.Text = DateTime.Now.ToString();
-            pippo.Text = Infrastructure.Settings.LastUsedSec;
+
             DateTime dtOne = new System.DateTime(2018, 3, 19);
             DateTime two = DateTime.Now;
             double answer = (two - dtOne).TotalDays;

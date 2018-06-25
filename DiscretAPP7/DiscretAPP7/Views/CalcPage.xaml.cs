@@ -33,20 +33,20 @@ namespace DiscretAPP7.Views
             
             Keyboard o = Keyboard.Numeric;
            
-            Label tx = new Label { TextColor= Color.Black, FontSize = 18, Text = "Nota " + (numeroDeNotas + 1) };
-            tx.FontFamily = "{StaticResource BoldFont}";
+            Label tx = new Label { TextColor= Color.Black, FontSize = 18, Text = "Nota " + (numeroDeNotas + 1), FontFamily = "agency_fb_bold.ttf#agency_fb" };
+           
             grid.Children.Add(tx, 0, numeroDeNotas);
             Textos[numeroDeNotas] = tx;
-            Entry x = new Entry { TextColor = Color.Black,  Keyboard = o, FontSize = 18};
-            x.FontFamily = "StaticResource BoldFont";
+            Entry x = new Entry { TextColor = Color.Black,  Keyboard = o, FontSize = 18, FontFamily = "agency_fb_bold.ttf#agency_fb" };
+            
             grid.Children.Add(x, 1, numeroDeNotas);
             Notas[numeroDeNotas] = x;
-            Entry y = new Entry { TextColor = Color.Black, Keyboard = o};
-            y.FontFamily = "StaticResource BoldFont";
+            Entry y = new Entry { TextColor = Color.Black, Keyboard = o, FontFamily = "agency_fb_bold.ttf#agency_fb" };
+            
             grid.Children.Add(y, 2, numeroDeNotas);
             Porcentajes[numeroDeNotas] = y;
-            Label tx2 = new Label { TextColor = Color.Black, FontSize = 18, Text = "%" };
-            tx2.FontFamily = "StaticResource BoldFont";
+            Label tx2 = new Label { TextColor = Color.Black, FontSize = 18, Text = "%", FontFamily = "agency_fb_bold.ttf#agency_fb" };
+            
             grid.Children.Add(tx2, 3, numeroDeNotas);
             TextosP[numeroDeNotas] = tx2;
 
@@ -72,7 +72,11 @@ namespace DiscretAPP7.Views
             if (!string.IsNullOrEmpty(this.FindByName<Entry>("N1").Text) && !string.IsNullOrEmpty(this.FindByName<Entry>("P1").Text))
             {
                 notaF = double.Parse(this.FindByName<Entry>("N1").Text) * (double.Parse(this.FindByName<Entry>("P1").Text) / 100);
-
+                if (double.Parse(this.FindByName<Entry>("N1").Text)<0 || double.Parse(this.FindByName<Entry>("N1").Text)> 20)
+                {
+                    Application.Current.MainPage.DisplayAlert("Error", "Las notas deben ser números entre 0 y 20", "Aceptar");
+                    return;
+                }
                 sumaPorc = double.Parse(this.FindByName<Entry>("P1").Text); 
 
             }
@@ -98,14 +102,16 @@ namespace DiscretAPP7.Views
                 }
                 notaF += numero * (porcentaje / 100);
 
-                if (sumaPorc>100) {
+                
+            }
+            if (sumaPorc != 100)
+            {
 
-                    Application.Current.MainPage.DisplayAlert("Error", "Porcentaje es mayor a 100%", "Aceptar");
+                Application.Current.MainPage.DisplayAlert("Error", "Porcentaje es mayor a 100%", "Aceptar");
 
 
 
-                    return;
-                }
+                return;
             }
             lb.Text = notaF.ToString();
         }
