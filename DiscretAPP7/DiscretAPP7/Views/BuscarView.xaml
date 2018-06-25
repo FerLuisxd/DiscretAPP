@@ -21,7 +21,7 @@
                 TextColor="Black"
                 FontFamily="{StaticResource BoldFont}"
                 ></Entry>
-           
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

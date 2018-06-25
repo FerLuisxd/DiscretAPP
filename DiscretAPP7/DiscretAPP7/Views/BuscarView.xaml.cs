@@ -9,63 +9,96 @@ using Xamarin.Forms.Xaml;
 
 namespace DiscretAPP7.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class BuscarView : ContentPage
-	{
-        String[] Temas = { "CONJUNTOS","DIVISION DE LOS ENTEROS","MATRICES BOOLEANAS", "LOGICA PROPOSICIONAL", "CUANTIFICADORES","INDUCCION MATEMATICA",
-        "ALGORITMOS","SUCESIONES","RELACIONES","RELACIONES DEFINICION", "RELACIONES PROPIEDADES","RELACIONES MANIPULACION","FUNCIONES","FUNCIONES DE PERMUTACION", "ESTUCTURAS DE ORDEN DIAGRAMA DE HASSE",
-        "ESTRUCTUAS DE ORDEN ELEMENTOS EXTREMOS COTAS", "RETICULAS DEFINICION TIPOS","ALGEBRA DE BOOLE DEFINICION PROPIEDADES","CLASE INTEGRAL", "","", "EXAMENES PARCIALES", "PARCIALES PASADOS", "EA",
-        "FUNCIONES BOOLEANAS","MAPA DE KARNAUGH","ARBOLES DIRIGIDOS","ARBOLES DIRIGIDOS","BUSQUEDA EN ARBOLES","ESPACIO EUCLIDIANO", "COMBINACION LINEAL", "BASE DE ESPACIO VECTORIAL","CAMBIO DE BASE", "PC2",
-        "PRACTICA CALIFICADA 2", "TRANSFORMACIONES LINEALES", "NUCLEO TRANSFORMACION LINEAL", "IMAGEN TRANSFORMACION LINEAL", "AUTOVALORES Y AUTOVECTORES", "CADENA DE MARKOV", "MARKOV", "CLASE INTEGRADORA"        };
-       
-        Button[] Encontrados;
-        int numerx;
-        public BuscarView ()
-		{
-            numerx = 0;
-            
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class BuscarView : ContentPage
+    {
+        List<String> Temas;
+        List<Button> Encontrados;
+        public BuscarView()
+        {
+            Temas = new List<String>();
+            Encontrados = new List<Button>();
+            Temas.Add("CONJUNTOS");
+            Temas.Add("DIVISION DE LOS ENTEROS");
+            Temas.Add("MATRICES BOOLEANAS");
+            Temas.Add("LOGICA PROPOSICIONAL");
+            Temas.Add("CUANTIFICADORES");
+            Temas.Add("ALGORITMOS");
+            Temas.Add("SUCESIONES");
+            Temas.Add("RELACIONES");
+            Temas.Add("RELACIONES DEFINICION");
+            Temas.Add("RELACIONES PROPIEDADES");
+            Temas.Add("RELACIONES MANIPULACION");
+            Temas.Add("FUNCIONES");
+            Temas.Add("FUNCIONES DE PERMUTACION");
+            Temas.Add("ESTUCTURAS DE ORDEN DIAGRAMA DE HASSE");
+            Temas.Add("ESTRUCTUAS DE ORDEN ELEMENTOS EXTREMOS COTAS");
+            Temas.Add("RETICULAS DEFINICION TIPOS");
+            Temas.Add("ALGEBRA DE BOOLE DEFINICION PROPIEDADES");
+            Temas.Add("CLASE INTEGRAL");
+            Temas.Add("");
+            Temas.Add("");
+            Temas.Add("EXAMENES PARCIALES");
+            Temas.Add("PARCIALES PASADOS");
+            Temas.Add("EA");
+            Temas.Add("FUNCIONES BOOLEANAS");
+            Temas.Add("MAPA DE KARNAUGH");
+            Temas.Add("ARBOLES DIRIGIDOS");
+            Temas.Add("ARBOLES DIRIGIDOS");
+            Temas.Add("BUSQUEDA EN ARBOLES");
+            Temas.Add("ESPACIO EUCLIDIANO");
+            Temas.Add("COMBINACION LINEAL");
+            Temas.Add("BASE DE ESPACIO VECTORIAL");
+            Temas.Add("CAMBIO DE BASE");
+            Temas.Add("PC2");
+            Temas.Add("PRACTICA CALIFICADA 2");
+            Temas.Add("TRANSFORMACIONES LINEALES");
+            Temas.Add("NUCLEO TRANSFORMACION LINEAL");
+            Temas.Add("IMAGEN TRANSFORMACION LINEAL");
+            Temas.Add("AUTOVALORES Y AUTOVECTORES");
+            Temas.Add("CADENA DE MARKOV");
+            Temas.Add("MARKOV");
+            Temas.Add("CLASE INTEGRADORA");
+            InitializeComponent();
+        }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            for (int i = 0; i < 42; i++)
-            {
-                if (Temas[i] == Encontrados[numerx].Text)
-                {
-                    int j = i+1;
-                    for (j = 1; j <= 3; j++)
-                    {
-                        if (j % 3 == 0) break;
-                        j++;
-                    }
-                    Application.Current.MainPage.Navigation.PushAsync(new DisPage(j/3));
-                }
-            }
-           
+            Button o = sender as Button;
+            String nombre = o.Text;
+            nombre = nombre.ToUpper();
+            for (int i = 0; i < Temas.Count(); i++)
+                if (Temas[i] == nombre)
+                    Application.Current.MainPage.Navigation.PushAsync(new DisPage(i + 1));
+
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            for (int i = 0; i < numerx; i++)
-                micont.Children.Remove(Encontrados[numerx]);
-            numerx = 0;
+            for (int i = 0; i < Encontrados.Count(); i++)
+                micont.Children.Remove(Encontrados[i]);
 
-            String temBuscar = this.FindByName<Entry>("Bs").Text;
-            for (int i = 0; i < 42; i++)
+            String temBuscar = Bs.Text;
+            temBuscar = temBuscar.ToUpper();
+            for (int i = 0; i < Temas.Count(); i++)
             {
                 if (Temas[i].StartsWith(temBuscar))
                 {
-                    
-                    Button nuevo = new Button { Text = Temas[i] };
-                    nuevo.Clicked+= Button_Clicked;
-                    Encontrados[numerx] = nuevo;
-                    micont.Children.Add(Encontrados[numerx]);
-                    numerx++;
-                    
+
+                    Button nuevo = new Button
+                    {
+                        Text = Temas[i],
+                        TextColor = Color.Black,
+                        BackgroundColor = Color.Red
+                    };
+                    nuevo.Clicked += Button_Clicked;
+                    Encontrados.Add(nuevo);
+                    micont.Children.Add(nuevo);
+
                 }
 
             }
+
         }
     }
 }

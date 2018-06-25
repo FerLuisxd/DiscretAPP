@@ -25,16 +25,26 @@ namespace DiscretAPP7.Views
         public DisPage()
         {
             InitializeComponent();
-            asd();
+            asd(0);
            
         }
         public DisPage(int semana)
         {
             InitializeComponent();
-            asd();
-            sem = semana;
+            for (int i = 1; i <= 3; i++)
+            {
+                if (semana % 3 == 0)
+                    break;
+                else
+                    semana++;
+
+            }
+            sem = semana / 3;
+            asd(sem);
+           
+
         }
-        private void asd()
+        private void asd(int s)
         {
             VSemA = this.FindByName<Button>("BSemA");
             VSemS = this.FindByName<Button>("BSemS");
@@ -55,7 +65,9 @@ namespace DiscretAPP7.Views
             DateTime dtOne = new System.DateTime(2018, 3, 19);
             DateTime two = DateTime.Now;
             double answer = (two - dtOne).TotalDays;
-            sem = ((int)answer / 7) + 1;
+            if (s == 0)
+                  sem = ((int)answer / 7) + 1;
+          
             semaa = this.FindByName<Label>("Semana");
             semaa.Text = "Semana : " + sem.ToString();
             if (sem == 8) semaa.Text = "Semana : " + sem.ToString() + " Parcial";
