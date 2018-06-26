@@ -6,6 +6,8 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
+                
+                
                 x:Name="micont">
                 <Label Text="Ingrese el tema que deseas buscar!"
                     FontSize="18"
