@@ -29,5 +29,9 @@ namespace DiscretAPP7.Views
             PopupNavigation.Instance.PushAsync(new PopUpView(1));
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new notif());
+        }
     }
 }

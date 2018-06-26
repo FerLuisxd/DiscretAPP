@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiscretAPP7.Views.notif">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button
+               Clicked="Button_Clicked"
+                   BackgroundColor="Transparent"
+                    Font="18"
+                Text="Regresar" 
+                    FontFamily="{StaticResource BoldFont}"
+                ></Button>
+            <WebView x:Name="appcenter" 
+                     Source="https://appcenter.ms/sign-in"
+                     WidthRequest="1000"
+                     HeightRequest="1000">
+ 
+            </WebView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

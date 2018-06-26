@@ -19,6 +19,7 @@ namespace DiscretAPP7.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+    
             StartActivity(typeof(MainActivity));
         }
     }
