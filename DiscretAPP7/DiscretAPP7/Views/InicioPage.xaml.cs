@@ -18,7 +18,7 @@ namespace DiscretAPP7.Views
 		}
         protected void DisPage(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new DisPage());
+            Application.Current.MainPage.Navigation.PushAsync(new Page1());
         }
         private void Acercade(object o, EventArgs e)
         {
