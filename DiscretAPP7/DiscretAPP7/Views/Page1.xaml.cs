@@ -17,47 +17,34 @@ namespace DiscretAPP7.Views
 		public Page1 ()
 		{
 			InitializeComponent ();
-            Correos.ItemsSource = new List<String>
-            {
-                "Coordinadador del Área de Ciencias - José Cuevas",
-                "Coordinador del Curso - Marcos Medina",
-                "Luis Acosta",
-                "Daniel Muñoz",
-                "Raul Acosta",
-                "Kenny Venegas",
-                "Luis Iquise"
-            };
-            for (int i = 0; i < 7; i++)
-                seleccionados.Add(false);
+    
 		}
        
 
         private void Boton_Enviar(object sender, EventArgs e)
         {
-           
-            for(int i =0; i< seleccionados.Count();i++)
-            {
-                if(seleccionados[i])
-                {
-                    
-                     if(i == 0)
-                       correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else if(i==1)
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else if(i==2)
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else if(i==3)
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else if(i==4)
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else if(i==5)
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
-                     else
-                        correosParaEnviar.Add("u201711590@upc.edu.pe");
 
-                }
-            }
-            
+            if (switch1.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
+            if (switch2.IsToggled)
+                correosParaEnviar.Add("u201711590@upc.edu.pe");
+
+            if (switch3.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
+            if (switch4.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
+            if (switch5.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
+            if (switch6.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
+            if (switch7.IsToggled)
+                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
+
             String texto = msj.Text;
             var email = CrossMessaging.Current.EmailMessenger;
             if (email.CanSendEmail)

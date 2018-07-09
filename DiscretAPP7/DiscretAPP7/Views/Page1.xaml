@@ -15,34 +15,86 @@
                 TextColor="Black"
                FontFamily="{StaticResource BoldFont}"
                 ></Label>
-                
-                <ListView
-                    x:Name="Correos"
-                    >
-                    <ListView.HeaderTemplate>
-                        <DataTemplate>
-                            <Grid Padding="12">
-                                <Label
-                                    Text="Correos"></Label>
-                            </Grid>
-                        </DataTemplate>
-                    </ListView.HeaderTemplate>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Grid Padding="12"
-                                      BackgroundColor="Black"
-                
-                                      >
-                                    <Label Text="{Binding .}"
-                                           FontSize="20"
-                                           TextColor="White"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Font="20"
+                Text="Coordinadador del Área de Ciencias - José Cuevas" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="1"
+                Grid.Column="0"
+                Font="20"
+                Text="Coordinador del Curso - Marcos Medina" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="2"
+                Grid.Column="0"
+                Font="20"
+                Text="Luis Acosta" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="3"
+                Grid.Column="0"
+                Font="20"
+                Text="Daniel Muñoz" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="4"
+                Grid.Column="0"
+                Font="20"
+                Text="Raul Acosta" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="5"
+                Grid.Column="0"
+                Font="20"
+                Text="Kenny Venegas" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Label 
+                Grid.Row="6"
+                Grid.Column="0"
+                Font="20"
+                Text="Luis Iquise" FontFamily="{StaticResource BoldFont}"
+                 TextColor="Black" 
+                        VerticalOptions="Center"
+                        />
+                    <Switch x:Name="switch1" Grid.Row="0" Grid.Column="1" />
+                    <Switch x:Name="switch2" Grid.Row="1" Grid.Column="1" />
+                    <Switch x:Name="switch3" Grid.Row="2" Grid.Column="1" />
+                    <Switch x:Name="switch4" Grid.Row="3" Grid.Column="1" />
+                    <Switch x:Name="switch5" Grid.Row="4" Grid.Column="1" />
+                    <Switch x:Name="switch6" Grid.Row="5" Grid.Column="1" />
+                    <Switch x:Name="switch7" Grid.Row="6" Grid.Column="1" />
 
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                </Grid>
+              
                 <Entry WidthRequest="200"
                    HeightRequest="200" 
                    MaxLength="200"
@@ -51,7 +103,7 @@
                        >
                 </Entry>
                 <Button
-                Clicked="Button_Clicked"
+                Clicked="Boton_Enviar"
                FontSize="18"
                 FontAttributes="Bold"
                 HorizontalOptions="CenterAndExpand"
