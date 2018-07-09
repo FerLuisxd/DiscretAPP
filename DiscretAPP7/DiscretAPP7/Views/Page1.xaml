@@ -15,23 +15,29 @@
                 TextColor="Black"
                FontFamily="{StaticResource BoldFont}"
                 ></Label>
-
-                <ListView x:Name="Correos"
-                    ItemsSource="{Binding .}" Margin="20"
-                          ItemSelected="Correos_ItemSelected">
+                
+                <ListView
+                    x:Name="Correos"
+                    >
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid Padding="12">
+                                <Label
+                                    Text="Correos"></Label>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid Margin="0,0,0,10">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <StackLayout VerticalOptions="CenterAndExpand">
-                                        <Label Text="{Binding Data.Name}"  />
-                                        <Label Text="{Binding Data.Description}" FontSize="10" />
-                                    </StackLayout>
-                                    <Switch IsToggled="{Binding Selected}" Grid.Column="1" />
+                                <Grid Padding="12"
+                                      BackgroundColor="Black"
+                
+                                      >
+                                    <Label Text="{Binding .}"
+                                           FontSize="20"
+                                           TextColor="White"/>
+
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
@@ -45,7 +51,7 @@
                        >
                 </Entry>
                 <Button
-                Clicked="Boton_Enviar"
+                Clicked="Button_Clicked"
                FontSize="18"
                 FontAttributes="Bold"
                 HorizontalOptions="CenterAndExpand"
