@@ -276,6 +276,20 @@
                         Clicked="LogOut">
 
                     </Button>
+                    <Button
+                        
+                        Margin="15,5,15,5"
+                        Text="Contacta a tu profesor" 
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       Font="20"
+                       BackgroundColor="DarkRed" 
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        FontFamily="{StaticResource BoldFont}"
+                        Clicked="Contacta">
+
+                    </Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

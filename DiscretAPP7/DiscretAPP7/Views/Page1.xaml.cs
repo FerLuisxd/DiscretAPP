@@ -23,35 +23,47 @@ namespace DiscretAPP7.Views
 
         private void Boton_Enviar(object sender, EventArgs e)
         {
-
-            if (switch1.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
-            if (switch2.IsToggled)
-                correosParaEnviar.Add("u201711590@upc.edu.pe");
-
-            if (switch3.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
-            if (switch4.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
-            if (switch5.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
-            if (switch6.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
-            if (switch7.IsToggled)
-                correosParaEnviar.Add("jose.cuevas@upc.edu.pe");
-
             String texto = msj.Text;
-            var email = CrossMessaging.Current.EmailMessenger;
-            if (email.CanSendEmail)
+
+
+            var emailTask =  CrossMessaging.Current.EmailMessenger;
+
+            if (emailTask.CanSendEmail)
             {
-                for (int i = 0; i < correosParaEnviar.Count(); i++)
-                    email.SendEmail(correosParaEnviar[i], "ALUMNO DESDE DISCRETAPP", texto);
+                
+            var email = new EmailMessageBuilder()
+           .Subject("ALUMNO DESDE DISCRETAPP")
+           .Body(texto)
+           ;
+
+                if (switch1.IsToggled)
+                    email.To("jose.cuevas@upc.edu.pe");
+
+                if (switch2.IsToggled)
+                    email.To("pcmamed@upc.edu.pe");
+
+                if (switch3.IsToggled)
+                    email.To("jose.cuevas@upc.pe");
+
+                if (switch4.IsToggled)
+                    email.To("pcmalmun@upc.edu.pe");
+
+                if (switch5.IsToggled)
+                    email.To("pcmapaco@upc.edu.pe");
+
+                if (switch6.IsToggled)
+                    email.To("kenny@imca.edu.pe");
+                
+                emailTask.SendEmail(email.Build());
             }
+
+
+            //{
+            // for (int i = 0; i < correosParaEnviar.Count(); i++)
+            //       email.SendEmail(correosParaEnviar[i], "ALUMNO DESDE DISCRETAPP", texto);
+            //}
+
+            Application.Current.MainPage.DisplayAlert("Exito", "Su mensaje se ha enviado", "Aceptar");
         }
 
         private void Correos_ItemSelected(object sender, SelectedItemChangedEventArgs e)

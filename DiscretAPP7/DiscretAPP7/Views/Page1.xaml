@@ -45,16 +45,9 @@
                  TextColor="Black" 
                         VerticalOptions="Center"
                         />
+                    
                     <Label 
                 Grid.Row="2"
-                Grid.Column="0"
-                Font="20"
-                Text="Luis Acosta" FontFamily="{StaticResource BoldFont}"
-                 TextColor="Black" 
-                        VerticalOptions="Center"
-                        />
-                    <Label 
-                Grid.Row="3"
                 Grid.Column="0"
                 Font="20"
                 Text="Daniel Muñoz" FontFamily="{StaticResource BoldFont}"
@@ -62,7 +55,7 @@
                         VerticalOptions="Center"
                         />
                     <Label 
-                Grid.Row="4"
+                Grid.Row="3"
                 Grid.Column="0"
                 Font="20"
                 Text="Raul Acosta" FontFamily="{StaticResource BoldFont}"
@@ -70,7 +63,7 @@
                         VerticalOptions="Center"
                         />
                     <Label 
-                Grid.Row="5"
+                Grid.Row="4"
                 Grid.Column="0"
                 Font="20"
                 Text="Kenny Venegas" FontFamily="{StaticResource BoldFont}"
@@ -78,7 +71,7 @@
                         VerticalOptions="Center"
                         />
                     <Label 
-                Grid.Row="6"
+                Grid.Row="5"
                 Grid.Column="0"
                 Font="20"
                 Text="Luis Iquise" FontFamily="{StaticResource BoldFont}"
@@ -91,7 +84,6 @@
                     <Switch x:Name="switch4" Grid.Row="3" Grid.Column="1" />
                     <Switch x:Name="switch5" Grid.Row="4" Grid.Column="1" />
                     <Switch x:Name="switch6" Grid.Row="5" Grid.Column="1" />
-                    <Switch x:Name="switch7" Grid.Row="6" Grid.Column="1" />
 
                 </Grid>
               
